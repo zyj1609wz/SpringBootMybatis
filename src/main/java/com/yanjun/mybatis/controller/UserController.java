@@ -1,5 +1,6 @@
 package com.yanjun.mybatis.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.yanjun.mybatis.bean.User;
 import com.yanjun.mybatis.service.UserService;
 import org.apache.ibatis.annotations.Param;
@@ -19,6 +20,11 @@ public class UserController {
     @GetMapping("get/{name}")
     public List<User> getUser(@PathVariable("name") String name) {
         return userService.get(name);
+    }
+
+    @GetMapping("findAll")
+    public PageInfo getUser(int pageNum, int pageSize) {
+        return userService.findAll(pageNum,pageSize);
     }
 
     @GetMapping("insert")
