@@ -6,5 +6,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     sql-script-encoding: UTF-8
 
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
 server:
-  port: 8032
+  port: 8023
