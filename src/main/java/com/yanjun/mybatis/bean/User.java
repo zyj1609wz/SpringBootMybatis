@@ -1,9 +1,18 @@
 package com.yanjun.mybatis.bean;
 
+import tk.mybatis.mapper.annotation.KeySql;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name = "t_user")
 public class User {
 
+    @Id
+    @KeySql(useGeneratedKeys = true)
     Integer id;
+
     String name;
+
     Integer age;
 
     public Integer getId() {

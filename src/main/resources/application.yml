@@ -6,11 +6,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     sql-script-encoding: UTF-8
 
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  notEmpty: true
 
 server:
   port: 8023
