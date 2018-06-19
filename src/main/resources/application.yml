@@ -9,7 +9,8 @@ spring:
 mapper:
   mappers:
     - tk.mybatis.mapper.common.Mapper
-  notEmpty: true
+  not-empty: false
+  identity: MYSQL
 
 server:
   port: 8023

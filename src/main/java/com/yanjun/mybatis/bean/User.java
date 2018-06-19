@@ -1,10 +1,11 @@
 package com.yanjun.mybatis.bean;
 
 import tk.mybatis.mapper.annotation.KeySql;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Table(name = "t_user")
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
     @Id

@@ -31,7 +31,7 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
     runtime('mysql:mysql-connector-java')  //mysql驱动
-    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0'
 
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0' //mybatis核心库
     compile 'tk.mybatis:mapper-spring-boot-starter:2.0.2' //mapper
 }
