@@ -15,7 +15,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("get/{name}")
+    @GetMapping("get/{id}")
     public User getUser(@PathVariable("id") Integer id) {
         return userService.get(id);
     }
@@ -24,4 +24,9 @@ public class UserController {
     public List<User> getUser() {
         return userService.findAll();
     }
+
+    public List<User> getInIds(List<Integer> ids ){
+        return userService.getInIds(ids);
+    }
+
 }
