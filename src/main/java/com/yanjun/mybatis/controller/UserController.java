@@ -3,9 +3,7 @@ package com.yanjun.mybatis.controller;
 import com.yanjun.mybatis.bean.User;
 import com.yanjun.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,8 +23,9 @@ public class UserController {
         return userService.findAll();
     }
 
-    public List<User> getInIds(List<Integer> ids ){
-        return userService.getInIds(ids);
+    @PostMapping("insert")
+    public int insert(@RequestBody User user) {
+        return userService.insert(user);
     }
 
 }
